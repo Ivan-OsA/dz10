@@ -1,8 +1,8 @@
 package org.example.dz10.radio;
 
 public class Radio {
-    public int currentStation;
-    public int currentVolume;
+    private int currentStation;
+    private int currentVolume;
 
     public int getCurrentStation() {
         return currentStation;
@@ -23,7 +23,7 @@ public class Radio {
         if (currentStation == 9) {
             currentStation = 0;
         } else {
-            currentStation = currentStation + 1;
+            currentStation++;
         }
     }
 
@@ -31,7 +31,7 @@ public class Radio {
         if (currentStation == 0) {
             currentStation = 9;
         } else {
-            currentStation = currentStation - 1;
+            currentStation--;
         }
     }
 
@@ -53,15 +53,15 @@ public class Radio {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
-        if (currentVolume == 10){
+        if (currentVolume == 10) {
             return;
         }
-        }
+    }
 
-        public void decreaseVolume() {
-            if (currentVolume == 0){
-                return;
-            }
+    public void decreaseVolume() {
+        if (currentVolume == 0) {
+            return;
+        }
         if (currentVolume < 10) {
             currentVolume = currentVolume - 1;
         }
